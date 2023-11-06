@@ -59,3 +59,23 @@ nav li{
     display: block;
     position: absolute;
   }
+
+.grid-container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    'topnav, topnav, topnav'
+    'header, header, header'
+    'container, container, container';
+}
+
+.container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas:
+    'topnav, topnav, topnav'
+    'header, header, header'
+    'container, container, container';
+}

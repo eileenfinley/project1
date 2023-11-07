@@ -1,35 +1,83 @@
 <!DOCTYPE html>
 <html lang ="en">
+<link rel = "stylesheet" href = "style.css">
 
 <html>
     <head>
         <title>Truman</title>
     </head>
     <body>
-        <div class="topnav">
-            <nav>
-                <ul>
-                    <li><a class = "active" href="index.html">Home</a></li>
-                    <li><a href="page1.html">History</a></li>
-                    <li><a href="page2.html">Basics</a></li>
-                    <li><a href="page3.html">Terminology</a></li>
-                    <li><a href="page4.html">Truman Ultimate</a></li>
-                    <li>
-                        <div class="dropdown">
-                        <button class="dropbtn"><a href="page5.html">Playbook</a> </button>
-                        <div class="dropdown-content">
-                        <a href="page6.html">Bowtie</a>
-                        <a href="page7.html">Handle Motion</a>
-                        <a href="page8.html">Endzone</a>
+        <div class = "grid-container">
+            <div class="topnav">
+                <nav>
+                    <ul>
+                        <li><a class = "active" href="index.html">Home</a></li>
+                        <li><a href="page1.html">History</a></li>
+                        <li><a href="page2.html">Basics</a></li>
+                        <li><a href="page3.html">Terminology</a></li>
+                        <li><a href="page4.html">Truman Ultimate</a></li>
+                        <li>
+                            <div class="dropdown">
+                            <button class="dropbtn"><a href="page5.html">Playbook</a> </button>
+                            <div class="dropdown-content">
+                            <a href="page6.html">Bowtie</a>
+                            <a href="page7.html">Handle Motion</a>
+                            <a href="page8.html">Endzone</a>
+                            </div>
                         </div>
-                    </div>
-                    </li>
-                    <li><a href="page9.html">More Information</a></li>
-                </ul>
-            
-            </nav>
-        </div>
+                        </li>
+                        <li><a href="page9.html">More Information</a></li>
+                    </ul>
+                
+                </nav>
+            </div>
 
-        <h1>Ultimate at Truman</h1>
+            <div class = "header">
+                <h1>Ultimate at Truman</h1>
+            </div>
+            
+            <div class = "truman">
+                <table>
+                    <caption>What does Ultimate look like at Truman?</caption>
+                    <tr>
+                        <td>Women's Ultimate</td>
+                        <td>Men's Ultimate</td>
+                        <td>Intramurals</td>                        
+                    </tr>
+                    <tr>
+                        <td>
+                            The Women's Ultimate team is called TSUnami! They practice twice a week.
+                            They have about 3-4 tournaments per semester and travel all around the country.
+                            They compete competitively against many different schools.
+                        </td>
+                        <td>
+                            The Men's Ultimate team is called JuJiTSU! They also practice twice a week.
+                            They are very similar to the women's team with having 3-4 tournaments per semester across the country.
+                            Both teams are club teams at Truman.
+                        </td>
+                        <td>
+                            Intramural frisbee is only local to Truman's campus. Typically, it is less experienced players.
+                            They play a game a week with no practices and play against other teams on campus.
+                            Intramural frisbee is much more casaul on campus than club frisbee.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <form method = "post" action = "process.php">
+                <fieldset>
+                    <legend>Interested? Fill in your info here:</legend>
+                    <p>
+                        <label>Name: </label>
+                        <input type = "text" name = "title"/>
+                    </p>
+                    <p>
+                        <label>Email: </label>
+                        <input type = "text" name ="email"/>
+                    </p>
+                    <input type = "submit"/>
+                </fieldset>
+            </form>
+        </div>
     </body>
 </html>

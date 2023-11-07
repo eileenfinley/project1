@@ -81,3 +81,17 @@ nav li{
   line-height: 20px;
   font-size: 16px;
 }
+
+table{
+  border: solid 1pt black;
+  border-collapse: collapse;
+}
+
+td{
+  border: solid 1pt black;
+  padding: 10pt;
+}
+
+caption{
+    font-weight: bold;
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang ="en">
 <link rel = "stylesheet" href = "style.css">
+<script src = "script.js"></script>
 
 <html>
     <head>
@@ -64,12 +65,12 @@
                 </table>
             </div>
 
-            <form method = "post" action = "process.php">
+            <form id = "form">
                 <fieldset>
                     <legend>Interested? Fill in your info here:</legend>
                     <p>
                         <label>Name: </label>
-                        <input type = "text" name = "title"/>
+                        <input type = "text" name = "name"/>
                     </p>
                     <p>
                         <label>Email: </label>
@@ -78,6 +79,7 @@
                     <input type = "submit"/>
                 </fieldset>
             </form>
+            <div id = "jsonDisplay"></div>
         </div>
     </body>
 </html>

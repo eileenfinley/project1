@@ -32,6 +32,18 @@ nav li{
     margin: 0;
 }
 
+body{
+  background-color: rgb(218, 244, 204);
+}
+
+a:visited{
+  color: #e75480;
+}
+
+a:hover{
+  color: #a209bd;
+}
+
 .dropdown-content {
     display: none;
     position: fixed;

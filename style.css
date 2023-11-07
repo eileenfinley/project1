@@ -95,3 +95,16 @@ td{
 caption{
     font-weight: bold;
 }
+
+.container-playbook{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-playbook > div{
+  background-color: #f1f1f1;
+  width: 450px;
+  margin: 10px;
+  line-height: 20px;
+  font-size: 16px;
+}

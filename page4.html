@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang ="en">
-<link rel = "stylesheet" href = "style.css">
+<link rel = "stylesheet" href = "style.css" media = "screen and (min-width:769px)"/>
+<link rel = "stylesheet" href = "mobile.css" media = "screen and (max-width: 480px)"/>
+<link rel = "stylesheet" href = "tablet.css" media = "screen and (min-width:481px) and (max-width:768px)"/>
 <script src = "script.js"></script>
 
 <html>
@@ -61,21 +63,21 @@
                 </table>
             </div>
 
+            <p id = "finalJSONText">Information</p>
             <form id = "form">
                 <fieldset>
                     <legend>Interested? Fill in your info here:</legend>
                     <p>
                         <label>Name: </label>
-                        <input type = "text" name = "name"/>
+                        <input type = "text" name = "name" placeholder="name"/>
                     </p>
                     <p>
                         <label>Email: </label>
-                        <input type = "text" name ="email"/>
+                        <input type = "text" name ="email" placeholder="email"/>
                     </p>
                     <input type = "submit"/>
                 </fieldset>
             </form>
-            <div id = "jsonDisplay"></div>
         </div>
     </body>
 </html>

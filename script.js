@@ -8,14 +8,14 @@ myForm.addEventListener("submit", function (e) {
     let name = document.querySelector("#name").value;
     let email = document.querySelector("#email").value;
     // if the name is empty
-    if(name==null || name==""){
+    if(name===null || name===""){
         alert("Enter a name");
         // do not let the submit happen
         e.preventDefault();
         return;
     }
     // if the email is empty
-    if(email == null || email == ""){
+    if(email === null || email === ""){
         alert("Enter an email");
         // do not let the submit happen
         e.preventDefault();

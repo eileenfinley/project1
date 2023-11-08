@@ -1,3 +1,4 @@
+/*customize navbar*/
 nav{
   position: fixed;
   top: 0;
@@ -13,14 +14,17 @@ nav{
   font-size: 16px;
 }
 
+/*put the navbar in the correct spot*/
 nav *{
   display: inline;
 }
 
+/*space out the links in the navbar*/
 .topnav a{
   padding: 1%;
 }
-  
+
+/*customizes the dropdown in navbar*/
 .dropdown .dropbtn {
   font-size: 16px;  
   border: none;
@@ -44,6 +48,7 @@ a:hover{
   color: #a209bd;
 }
 
+/*customizes the links in the dropdown and puts the dropdown in front*/
 .dropdown-content {
     display: none;
     position: fixed;
@@ -65,6 +70,7 @@ a:hover{
     position: absolute;
 }
 
+/*use grid layout on each page*/
 .grid-container{
     display: grid;
     gap: 20px;
@@ -75,17 +81,26 @@ a:hover{
     'container, container, container';
 }
 
+/*flexbox style organization*/
 .container{
     display: flex;
     flex-wrap: wrap;
 }
 
+/*flexbox with transition*/
 .container > div {
   background-color: #f1f1f1;
   width: 300px;
   margin: 10px;
   line-height: 20px;
   font-size: 16px;
+  transition: width 2s, height 2s;
+}
+
+/*div container will get bigger when hovered over*/
+.container > div:hover{
+  width: 500px;
+  height: 450px;
 }
 
 table{
@@ -147,6 +162,7 @@ figure{
   animation: bouncing 15s linear infinite;
 }
 
+/*animation movement for frisbee*/
 @keyframes bouncing {
   0% {
     left: 0; 

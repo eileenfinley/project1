@@ -1,3 +1,4 @@
+/*this css file changes the size of some texts and also images to better fit smaller screens*/
 @media (min-width:481px) and (max-width:768px){
     nav{
         position: static;

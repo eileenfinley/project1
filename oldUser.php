@@ -20,7 +20,9 @@
 
                 if($user){
                     if(password_verify($password, $user["pswrd"])){
-                        echo("Login successful");
+                        session_start();
+                       $_SESSION["username"] = $user["username"];
+                        header("Location: profile.php");
                     }else{
                         echo("Password does not match");
                     }
@@ -32,7 +34,7 @@
         
         <form action = "oldUser.php" method = "post">
             Name <input type = "text" name = "user"/>
-            Pass <input type = "text" name = "pass" />
+            Pass <input type = "password" name = "pass" />
             <input type = "submit" name = "login">
         </form>
     </body>

@@ -43,6 +43,7 @@
                     mysqli_stmt_bind_param($stmt, "ss", $username, $passwordHash);
                     mysqli_stmt_execute($stmt);
                     echo "successful";
+                    header("Location: index.html");
                 }else{
                     die("Something went wrong");
                 }
@@ -52,7 +53,7 @@
 
     <form action = "loginpage.php" method = "post">
         Name <input type = "text" name = "user"/>
-        Pass <input type = "text" name = "pass" />
+        Pass <input type = "password" name = "pass" />
         <input type = "submit" name = "submit">
     </form>
 

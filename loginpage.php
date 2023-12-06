@@ -7,9 +7,13 @@
 </head>
 <body>
     <?php
+        include("database.php");
+        
         if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])){
             $username = $_POST["user"];
             $password = $_POST["pass"];
+
+            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
             $error = array();
 
@@ -17,7 +21,15 @@
                 array_push($error,"Fill in all fields");
             }
 
-            if(count($error)==1){
+            $sql = "SELECT * FROM phplogin WHERE username = '$username'";
+            $result = mysqli_query($conn, $sql);
+            $rowNum = mysqli_num_rows($result);
+
+            if($rowNum > 0){
+                array_push($error, "username already exists");
+            }
+
+            if(count($error)>0){
                 foreach($error as $error){
                     echo "". $error ."";
                 }   
@@ -28,7 +40,7 @@
                 $prepareStmt = mysqli_stmt_prepare($stmt,$sql);
 
                 if($prepareStmt){
-                    mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+                    mysqli_stmt_bind_param($stmt, "ss", $username, $passwordHash);
                     mysqli_stmt_execute($stmt);
                     echo "successful";
                 }else{
@@ -43,5 +55,7 @@
         Pass <input type = "text" name = "pass" />
         <input type = "submit" name = "submit">
     </form>
+
+    <p>Already have a login? <a href = "oldUser.php">Click here</a></p>
 </body>
 </html>

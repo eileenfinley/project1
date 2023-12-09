@@ -15,9 +15,10 @@
         
         foreach($products as $product) {
             $product_name = $product['name'];
-            $sql = "INSERT INTO recentorders (user_id, product_id) VALUES ('$username', '$product_name')";
+            $quantity = (int)$products_in_cart[$product['id']];
+            $sql = "INSERT INTO recentorders (user_id, product_id, quantity) VALUES ('$username', '$product_name', $quantity)";
             if ($conn->query($sql) === TRUE) {
-                echo "New record created successfully";
+                echo " ";
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }

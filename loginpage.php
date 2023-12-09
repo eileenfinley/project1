@@ -43,6 +43,8 @@
                     mysqli_stmt_bind_param($stmt, "ss", $username, $passwordHash);
                     mysqli_stmt_execute($stmt);
                     echo "successful";
+                    $_SESSION["username"] = $user["username"];
+                    $id = $_SESSION['id'];
                     header("Location: index.html");
                 }else{
                     die("Something went wrong");

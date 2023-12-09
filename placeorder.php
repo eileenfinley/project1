@@ -17,11 +17,7 @@
             $product_name = $product['name'];
             $quantity = (int)$products_in_cart[$product['id']];
             $sql = "INSERT INTO recentorders (user_id, product_id, quantity) VALUES ('$username', '$product_name', $quantity)";
-            if ($conn->query($sql) === TRUE) {
-                echo " ";
-            } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
+            $conn->query($sql);
         }
         
         unset($_SESSION['cart'])

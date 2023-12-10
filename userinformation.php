@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "loginstyle.css" />
     <title>information</title>
 </head>
 <body>
     <?php
         include("database.php");
 
-        if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])){
             $address = $_POST('address');
             $city = $_POST('city');
             $state = $_POST('state');
             $creditCard = $_POST('cc');
 
-            $sql = "INSERT INTO orderinformation (user_address, user_city, user_state, credit_card) VALUES ($address, $city, $state, $creditCard)";
+            $sql = "INSERT INTO orderinformation (user_address, user_city, user_state, credit_card) VALUES (?, ?, ?, ?)";
             $conn->query($sql);
 
-            /*$stmt = $conn->prepare($sql);
-
+            $stmt = $conn->prepare($sql);
             $stmt->bind_param("ssss", $address, $city, $state, $creditCard);
 
-            $stmt->execute();*/
-
-        }
+            if ($stmt->execute()) {
+                echo "User address inserted successfully!";
+            } else {
+                echo "Error inserting user address: " . $stmt->error;
+            }
     ?>
 
     <form action = "userinformation.php" method = "post">

@@ -110,7 +110,7 @@
                     <tr>
                         <td class="img">
                             <a href="index.php?page=product&id=<?=$product['id']?>">
-                                <img src="imgs/<?=$product['img']?>" width="50" height="50" alt="<?=$product['name']?>">
+                                <img src="<?=$product['img']?>" width="50" height="50" alt="<?=$product['name']?>">
                             </a>
                         </td>
                         <td>

@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "loginstyle.css" />
         <title>User Login</title>
     </head>
-    <body>
+    <body>  
         <?php
             include("database.php");
 
@@ -24,18 +25,25 @@
                        $_SESSION["username"] = $user["username"];
                         header("Location: profile.php");
                     }else{
-                        echo("Password does not match");
+                        echo("<div class = 'alert alert-invalid'>Password invalid</div>");
                     }
                 }else{
-                    echo("Username does not match");
+                    echo("<div class = 'alert alert-invalid'>Username invalid</div>");
                 }
             }
         ?>
+
         
-        <form action = "oldUser.php" method = "post">
-            Name <input type = "text" name = "user"/>
-            Pass <input type = "password" name = "pass" />
-            <input type = "submit" name = "login">
-        </form>
-    </body>
+        <div class = "main">
+            <div class = "signup">
+            <form action = "oldUser.php" method = "post" id = "submit">
+                <label>Login</label>
+                <input type = "text" name = "user" id = "user" placeholder = "Username"/>
+                <input type = "password" name = "pass" id = "pass" placeholder = "Password"/>
+                <input type = "submit" name = "login">
+            </form>
+            </div>
+        </div>  
+
+    </body>   
 </html>

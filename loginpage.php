@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "loginstyle.css" />
     <title>Login Page</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
 
             if(empty($username) OR empty($password)){
                 array_push($error,"Fill in all fields");
+                echo("<div class = 'alert alert-invalid'>Fill in all fields</div>");
             }
 
             $sql = "SELECT * FROM phplogin WHERE username = '$username'";
@@ -53,12 +55,20 @@
         }
     ?>    
 
-    <form action = "loginpage.php" method = "post">
-        Name <input type = "text" name = "user"/>
-        Pass <input type = "password" name = "pass" />
-        <input type = "submit" name = "submit">
-    </form>
+    <div class = "main">
+        <div class = "signup">
+            <form action = "loginpage.php" method = "post">
+                <label>Sign up</label>
+                <input type = "text" name = "user" placeholder = "Name"/>
+                <input type = "password" name = "pass" placeholder="Password" />
+                <input type = "submit" name = "submit">
+                <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
+            </form>               
+        </div>
 
-    <p>Already have a login? <a href = "oldUser.php">Click here</a></p>
+    </div>
+
+
+   
 </body>
 </html>

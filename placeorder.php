@@ -6,11 +6,10 @@
     <title>Order placing</title>
 </head>
 <body>
-    <?=template_header('Place Order')?>
 
     <?php
         include('database.php');
-        include('cart.php');
+        require('cart.php');
         $username = $_SESSION["username"];
         
         foreach($products as $product) {
@@ -19,18 +18,11 @@
             $sql = "INSERT INTO recentorders (user_id, product_id, quantity) VALUES ('$username', '$product_name', $quantity)";
             $conn->query($sql);
         }
+
+        header("Location: userinformation.php");
         
         unset($_SESSION['cart'])
     ?>
 
-
-    <div class="placeorder content-wrapper">
-        <h1>Your Order Has Been Placed</h1>
-        <p>Thank you for ordering with us! We'll contact you by email with your order details
-            <br>Thank you, <?= $username?>
-        </p>
-    </div>
-
-    <?=template_footer()?>
 </body>
 </html>

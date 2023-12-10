@@ -20,7 +20,7 @@
             echo "Error deleting rows: " . $conn->error;
         }
 
-        header("index.html");
+        header("Location: index.html");
 
         session_destroy();
     ?>

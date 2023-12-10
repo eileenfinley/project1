@@ -149,10 +149,6 @@ caption{
   font-size: 16px;
 }
 
-figure{
-  transform: skew(20deg);
-}
-
 .frisbee{
   position: relative;
   width: 100%;

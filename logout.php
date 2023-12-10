@@ -20,6 +20,15 @@
             echo "Error deleting rows: " . $conn->error;
         }
 
+        $sql = "DELETE FROM orderinformation";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "All rows deleted successfully.";
+        } else {
+            echo "Error deleting rows: " . $conn->error;
+        }
+
+
         header("Location: index.html");
 
         session_destroy();

@@ -10,10 +10,10 @@
         include("database.php");
 
         if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])){
-            $address = $_POST('address');
-            $city = $_POST('city');
-            $state = $_POST('state');
-            $creditCard = $_POST('cc');
+            $address = $_POST['address'];
+            $city = $_POST['city'];
+            $state = $_POST['state'];
+            $creditCard = $_POST['cc'];
 
             $sql = "INSERT INTO orderinformation (user_address, user_city, user_state, credit_card) VALUES (?, ?, ?, ?)";
             

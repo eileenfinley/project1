@@ -91,6 +91,7 @@
             <?php 
                 while($rows=$result2->fetch_assoc())
                 {
+                    if($rows['username'] == $username){
             ?>
             <tr>
                 <td><?php echo $rows['user_address'];?></td>
@@ -99,6 +100,7 @@
                 <td><?php echo $rows['credit_card'];?></td>
             </tr>
             <?php
+                    }
                 }
             ?>
         </table>

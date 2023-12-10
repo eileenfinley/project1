@@ -24,7 +24,7 @@
             $stmt->bind_param("sssss", $username, $address, $city, $state, $creditCard);
 
             if ($stmt->execute()) {
-                echo "User address inserted successfully!";
+                header("Location: index.php");
             } else {
                 echo "Error inserting user address: " . $stmt->error;
             }

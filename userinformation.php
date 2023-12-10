@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel = "stylesheet" href = "loginstyle.css" media = "screen and (min-width:769px)"/>-->
+    <link rel = "stylesheet" href = "loginstyle.css" media = "screen and (min-width:769px)"/>
     <title>information</title>
 </head>
 <body>
     <?php
         include("database.php");
-        $username = $_SESSION["username"];
+        session_start();
 
         if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])){
             $address = $_POST['address'];
             $city = $_POST['city'];
             $state = $_POST['state'];
             $creditCard = $_POST['cc'];
+            $username = $_SESSION["username"];
 
             $sql = "INSERT INTO orderinformation (username, user_address, user_city, user_state, credit_card) VALUES (?, ?, ?, ?, ?)";
             

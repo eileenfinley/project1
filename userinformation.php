@@ -15,7 +15,7 @@
             $state = $_POST('state');
             $creditCard = $_POST('cc');
 
-            $sql = "INSERT INTO orderinformation (user_address, user_city, user_state, credit_card) VALUES ('$address', '$city', '$state', '$creditCard')";
+            $sql = "INSERT INTO orderinformation (user_address, user_city, user_state, credit_card) VALUES ($address, $city, $state, $creditCard)";
             $conn->query($sql);
 
             /*$stmt = $conn->prepare($sql);

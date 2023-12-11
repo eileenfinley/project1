@@ -16,15 +16,15 @@
     <?=template_header('Home')?>
 
     <div class="featured">
-        <h2>Gadgets</h2>
-        <p>Essential gadgets for everyday use</p>
+        <h2>The Ultimate Gear</h2>
+        <p>Everything you need for Ultimate</p>
     </div>
     <div class="recentlyadded content-wrapper">
         <h2>Recently Added Products</h2>
         <div class="products">
             <?php foreach ($recently_added_products as $product): ?>
             <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
-                <img src="imgs/<?=$product['img']?>" width="200" height="200" alt="<?=$product['name']?>">
+                <img src="<?=$product['img']?>" width="200" height="200" alt="<?=$product['name']?>">
                 <span class="name"><?=$product['name']?></span>
                 <span class="price">
                     &dollar;<?=$product['price']?>

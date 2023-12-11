@@ -36,19 +36,37 @@
         </head>
         <body>
             <header>
-                <div class="content-wrapper">
-                    <h1>Shopping Cart System</h1>
+                <div class="topnav">
+                <header>
                     <nav>
-                        <a href="index.php">Home</a>
-                        <a href="index.php?page=products">Products</a>
-                    </nav>
-                    <div class="link-icons">
-                        <a href="index.php?page=cart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>$num_items_in_cart</span>
-                        </a>
-                    </div>
-                </div>
+                            <a class = "active" href="index.html">Home</a>
+                            <a href="page1.html">History</a>
+                            <a href="page2.html">Basics</a>
+                            <a href="page3.html">Terminology</a>
+                            <a href="page4.html">Truman Ultimate</a>
+                                <div class="dropdown">
+                                    <button class="dropbtn"><a href="page5.html">Playbook</a> </button>
+                                    <div class="dropdown-content">
+                                        <a href="page6.html">Bowtie</a>
+                                        <a href="page7.html">Handle Motion</a>
+                                        <a href="page8.html">Endzone</a>
+                                    </div>
+                                </div>
+                            <a href="page9.html">More Information</a>
+                            <a href = "index.php">Shop Here</a>
+                            <a href = "logout.php">Logout</a>
+                            <div class="link-icons">
+                                <a href = "profile.php">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </a>
+                                <a href="index.php?page=cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>$num_items_in_cart</span>
+                                </a>
+                            </div>
+                    </nav>                
+                </header>
+            </div>
             </header>
             <main>
     EOT;

@@ -6,15 +6,15 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: sans-serif;
-	background: #F1DDDF;
+	background: #67729D;
 }
 .main{
 	width: 350px;
 	height: 600px;
-	background: #476930;
+	background: #BB9CC0;
 	overflow: hidden;
 	border-radius: 10px;
-	border: 3px solid #86B049;
+	border: 3px solid #E7BCDE;
     position: absolute;
 }
 .signup{
@@ -35,7 +35,7 @@ label{
 input{
 	width: 60%;
 	height: 20px;
-	background: #e0dede;
+	background: white;
 	justify-content: center;
 	display: flex;
 	margin: 40px auto;
@@ -43,6 +43,7 @@ input{
 	border: none;
 	outline: none;
 	border-radius: 5px;
+	border: 3px solid #E7BCDE;
 }
 input[type=submit]{
 	width: 60%;
@@ -51,7 +52,7 @@ input[type=submit]{
 	justify-content: center;
 	display: block;
 	color: #000000;
-	background: rgb(240, 202, 243);
+	background: #F1EAFF;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -62,7 +63,7 @@ input[type=submit]{
 	cursor: pointer;
 }
 input[type=submit]:hover{
-	background: rgb(241, 156, 213);
+	background: #DCBFFF;
 }
 p{
 	justify-content: center;
@@ -107,10 +108,10 @@ a{
 .user{
 	width: 400px;
 	height: 700px;
-	background: #476930;
+	background: #BB9CC0;
 	overflow: hidden;
 	border-radius: 10px;
-	border: 3px solid #86B049;
+	border: 3px solid #E7BCDE;
     position: absolute;
 }
 
@@ -124,12 +125,15 @@ a{
 	color: white;
 }
 
-small{
-	justify-content: center;
-	align-items: center;
-	display: flex;
+.form-control small{
 	position: relative;
+	bottom: 0;
+	left: 0;
 	visibility: hidden;
+	color: #8B0000;
+	align-items: center;
+	justify-content: center;
+	display: flex;
 }
 
 .form-control.error small {
@@ -138,4 +142,10 @@ small{
 
 .form-control.error input {
 	border-color: #e74c3c;
+}
+
+.form-control{
+	position: relative;
+	margin-bottom: 2px;
+	padding-bottom: 0px;
 }

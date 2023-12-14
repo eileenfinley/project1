@@ -10,7 +10,7 @@ body{
 }
 .main{
 	width: 350px;
-	height: 500px;
+	height: 600px;
 	background: #476930;
 	overflow: hidden;
 	border-radius: 10px;
@@ -118,4 +118,24 @@ a{
 	position: relative;
 	width:100%;
 	height: 100%;
+}
+
+.error{
+	color: white;
+}
+
+small{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: relative;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
 }

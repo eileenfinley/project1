@@ -36,14 +36,22 @@
         
         <div class = "main">
             <div class = "signup">
-            <form action = "oldUser.php" method = "post" id = "submit">
+            <form action = "oldUser.php" method = "post" id = "form">
                 <label>Login</label>
-                <input type = "text" name = "user" id = "user" placeholder = "Username"/>
-                <input type = "password" name = "pass" id = "pass" placeholder = "Password"/>
+                <div class = "form-control">
+                    <input type = "text" name = "user" id = "user" placeholder = "Username"/>
+                    <small>Error Message</small>               
+                </div>
+                <div class = "form-control">
+                    <input type = "password" name = "pass" id = "pass" placeholder = "Password"/>
+                    <small>Error Message</small>               
+                </div>
                 <input type = "submit" name = "login">
             </form>
             </div>
         </div>  
+
+        <script type = "text/javascript" src="formvalidate.js"></script>  
 
     </body>   
 </html>

@@ -57,17 +57,23 @@
 
     <div class = "main">
         <div class = "signup">
-            <form action = "loginpage.php" method = "post">
+            <form action = "loginpage.php" method = "post" id = "form">
                 <label>Sign up</label>
-                <input type = "text" name = "user" placeholder = "Name"/>
-                <input type = "password" name = "pass" placeholder="Password" />
+                <div class = "form-control">
+                    <input type = "text" name = "user" id = "user" placeholder = "Name" />
+                    <small>Error Message</small>               
+                </div>
+                <div class = "form-control">
+                     <input type = "password" name = "pass" id = "pass" placeholder="Password" />
+                    <small>Error Message</small>               
+                </div>
                 <input type = "submit" name = "submit">
                 <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
             </form>               
         </div>
-
     </div>
 
+    <script type = "text/javascript" src="formvalidate.js"></script>  
 
    
 </body>

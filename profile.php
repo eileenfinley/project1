@@ -55,6 +55,9 @@
                         </div>
                 </nav>                
             </header>
+            <style>
+                    .topnav a{color: white; text-decoration: none;};
+            </style>
         </div>
 
         <div class = "header">

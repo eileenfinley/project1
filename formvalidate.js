@@ -37,7 +37,7 @@ function setSuccessFor(input) {
 	formControl.className = 'form-control success';
 }*/
 
-function validateForm(event) {
+/*function validateForm(event) {
     var isValid = true;
     
     // Remove previous error messages and highlights
@@ -75,4 +75,27 @@ function validateForm(event) {
     }
 
    // return isValid;  // Form will be submitted if all validation passes
+}*/
+
+/*function validateLoginForm() {
+    // Client-side validation
+    var username = document.getElementById('user').value;
+    var password = document.getElementById('pass').value;
+    var errorMessageElement = document.getElementById('errorMessage');
+
+    if (username === '' || password === '') {
+        errorMessageElement.textContent = 'Please fill in all fields.';
+        highlightFields();
+    } else {
+        errorMessageElement.textContent = '';
+        // Send data to the server for server-side validation
+        sendToServer(username, password);
+    }
 }
+
+function highlightFields() {
+    var usernameInput = document.getElementById('user');
+    var passwordInput = document.getElementById('pass');
+    usernameInput.style.borderColor = 'red';
+    passwordInput.style.borderColor = 'red';
+}*/

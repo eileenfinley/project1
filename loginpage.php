@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "loginstyle.css" />
-    <script type = "text/javascript" src="formvalidate.js"></script>            
     <title>Login Page</title>
 </head>
 <body>
@@ -30,6 +29,7 @@
 
             if($rowNum > 0){
                 array_push($error, "username already exists");
+                echo("<div class = 'alert alert-invalid'>Username already exists</div>");
             }
 
             if(count($error)>0){
@@ -77,7 +77,7 @@
 
     <!--<div class = "main">
         <div class = "signup">
-            <form action = "loginpage.php" method = "post" id = "form" onsubmit="return validateForm(event)">
+            <form action = "loginpage.php" method = "post" id = "form" onsubmit="return validateForm(event); return false">
                 <label>Sign up</label>
                 <div class = "form-control">
                     <input type = "text" name = "user" id = "user" placeholder = "Name" class = "validate" />
@@ -105,6 +105,20 @@
         </div>
     </div>
 
+    <!--<div class = "main">
+        <div class = "signup">
+            <form action = "loginpage.php" method = "post" id = "form" onsubmit = "validateLoginForm(); return false;">
+                <label>Sign up</label>
+                <input type = "text" name = "user" id = "user" placeholder = "Name" class = "validate" /> 
+                <input type = "password" name = "pass" id = "pass" placeholder="Password" class = "validate"/>    
+                <input type = "submit" name = "submit">
+                <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
+            </form>     
+        </div>
+
+        <div id="errorMessage" class="error"></div>
+        <script src="formvalidate.js"></script>
+    </div>-->
     
 
    

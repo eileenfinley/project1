@@ -88,7 +88,8 @@ a{
     position: relative;
     display: flex;
     z-index: 10;
-    margin-bottom: 240px;
+    margin-bottom: 350px;
+	margin-left: 100px;
 }
 
 .alert-invalid-info{
@@ -102,7 +103,7 @@ a{
     position: relative;
     display: flex;
     z-index: 10;
-    margin-bottom: 350px;
+    margin-bottom: 400px;
 }
 
 .user{

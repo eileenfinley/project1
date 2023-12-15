@@ -132,6 +132,8 @@
             <div class="subtotal">
                 <span class="text">Subtotal</span>
                 <span class="price">&dollar;<?=$subtotal?></span>
+                <br><span class = "text">Total with Taxes</span>
+                <span class = "price">&dollar;<?=($subtotal*.05)+$subtotal?></span>
             </div>
             <div class="buttons">
                 <input type="submit" value="Update" name="update">

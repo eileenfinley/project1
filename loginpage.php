@@ -60,9 +60,9 @@
             <form action = "loginpage.php" method = "post" id = "form" onsubmit = "return validateForm()">
                 <label>Sign up</label>
                 <input type = "text" name = "user" id = "user" placeholder = "Name" class = "validate" /> 
-                <span id="usernameError" class="error"></span><br>
+                <span id="usernameError" class="error"></span>
                 <input type = "password" name = "pass" id = "pass" placeholder="Password" class = "validate"/>  
-                <span id="passwordError" class="error"></span><br>  
+                <span id="passwordError" class="error"></span>  
                 <input type = "submit" name = "submit">
                 <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
             </form>     

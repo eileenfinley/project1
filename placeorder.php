@@ -19,10 +19,10 @@
             $sql = "INSERT INTO recentorders (user_id, product_id, quantity) VALUES ('$username', '$product_name', $quantity)";
             $conn->query($sql);
         }
-        
+
         header("Location: userinformation.php");
 
-        unset($_SESSION['cart'])
+        unset($_SESSION['cart']);
     ?>
 </body>
 </html>

@@ -207,9 +207,16 @@ header .link-icons {
 }
 
 h2{
-  position: absolute;
   margin-top: 5px;
   animation: fadeIn 3s;
+}
+
+.history > h2{
+  position: absolute;
+}
+
+.explanation > h2{
+  position: absolute;
 }
 
 @keyframes fadeIn {
@@ -295,4 +302,55 @@ ol li:before {
 
 .container-plays > img{
   height: 500px;
+}
+
+p{
+  position:relative;
+  margin-top: 30px;
+}
+
+.introduction{
+  display: flex;
+}
+
+.introduction > h2{
+  text-shadow: 2px 2px pink;
+  position: absolute;
+}
+
+.introduction > p{
+  margin-top: 40px;
+  font-size: large;
+  background-color: #fffff0;
+  border-radius: 10px;
+  float: left;
+  width: 900px;
+}
+
+.introduction > img{
+  float: right;
+  margin: 20px;
+}
+
+.profile{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.profile td, .profile th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.profile tr:nth-child(even){background-color: #f2f2f2;}
+
+.profile tr:hover {background-color: #ddd;}
+
+.profile th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
 }

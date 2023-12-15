@@ -61,49 +61,52 @@
             <h1>Welcome <?= $username?></h1>
         </div>
 
-        <h2>Order History</h2>
-        <table>
-            <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-            </tr>
-            <?php 
-                while($rows=$result->fetch_assoc())
-                {
-            ?>
-            <tr>
-                <td><?php echo $rows['product_id'];?></td>
-                <td><?php echo $rows['quantity'];?></td>
-            </tr>
-            <?php
-                }
-            ?>
-        </table>
-
-        <h2>User Information</h2>
-        <table>
-            <tr>
-                <th>Address</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Credit Card</th>
-            </tr>
-            <?php 
-                while($rows=$result2->fetch_assoc())
-                {
-                    if($rows['username'] == $username){
-            ?>
-            <tr>
-                <td><?php echo $rows['user_address'];?></td>
-                <td><?php echo $rows['user_city'];?></td>
-                <td><?php echo $rows['user_state'];?></td>
-                <td><?php echo $rows['credit_card'];?></td>
-            </tr>
-            <?php
+        <div class = "profile">
+            <h2>Order History</h2>
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                </tr>
+                <?php 
+                    while($rows=$result->fetch_assoc())
+                    {
+                ?>
+                <tr>
+                    <td><?php echo $rows['product_id'];?></td>
+                    <td><?php echo $rows['quantity'];?></td>
+                </tr>
+                <?php
                     }
-                }
-            ?>
-        </table>
+                ?>
+            </table>
+
+            <h2>User Information</h2>
+            <table>
+                <tr>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Credit Card</th>
+                </tr>
+                <?php 
+                    while($rows=$result2->fetch_assoc())
+                    {
+                        if($rows['username'] == $username){
+                ?>
+                <tr>
+                    <td><?php echo $rows['user_address'];?></td>
+                    <td><?php echo $rows['user_city'];?></td>
+                    <td><?php echo $rows['user_state'];?></td>
+                    <td><?php echo $rows['credit_card'];?></td>
+                </tr>
+                <?php
+                        }
+                    }
+                ?>
+            </table>
+
+        </div>
 
         
             

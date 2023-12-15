@@ -34,7 +34,7 @@
         ?>
 
         
-        <div class = "main">
+        <!--<div class = "main">
             <div class = "signup">
             <form action = "oldUser.php" method = "post" id = "form">
                 <label>Login</label>
@@ -51,7 +51,18 @@
             </div>
         </div>  
 
-        <script type = "text/javascript" src="formvalidate.js"></script>  
+        <script type = "text/javascript" src="formvalidate.js"></script>--> 
+        
+        <div class = "main">
+            <div class = "signup">
+            <form action = "oldUser.php" method = "post" id = "form">
+                <label>Login</label>
+                <input type = "text" name = "user" id = "user" placeholder = "Username"/>            
+                <input type = "password" name = "pass" id = "pass" placeholder = "Password"/>
+                <input type = "submit" name = "login">
+            </form>
+            </div>
+        </div> 
 
     </body>   
 </html>

@@ -47,21 +47,19 @@
                 <h1>Endzone Motion</h1>                
             </div>
             
-            <h2>A progression of endzone</h2>
             <div class = "container-plays">
-                <div class = "a">
-                    <img src = "vert1.png" alt = "first step of endzone"/>
-                </div>
-                <div class = "b">
-                    <img src = "vert2.png" alt = "second step of endzone"/>
-                </div>
-                <div class = "c">
-                    <img src = "vert3.png" alt = "third step of endzone"/>
-                </div>
-                <div class = "d">
-                    <img src = "vert4.png" alt = "fourth step of endzone"/>
-                </div>
+                <button class="button black display-left" onclick="plusDivs(-1)">&#10094;</button>
+
+                <img class="mySlides" src = "vert1.png" alt = "first step of endzone"/>
+                <img class="mySlides" src = "vert2.png" alt = "second step of endzone"/>
+                <img class="mySlides" src = "vert3.png" alt = "third step of endzone"/>
+                <img class="mySlides" src = "vert4.png" alt = "fourth step of endzone"/>
+
+                <button class="button black display-right" onclick="plusDivs(1)">&#10095;</button>
             </div>
+
+            <script src = "slideshow.js"></script>
+
         </div>
     </body>
 </html>

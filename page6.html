@@ -47,21 +47,18 @@
                 <h1>Bowtie</h1>                   
             </div>
             
-            <h2>A progression of pictures for bowtie</h2>
             <div class = "container-plays">
-                <div class = "a">
-                  <img src = "bowtie1.png" alt = "first step of bowtie"/>  
-                </div>
-                <div class = "b">
-                  <img src = "bowtie2.png" alt = "second step of bowtie"/>  
-                </div>
-                <div class = "c">
-                    <img src = "bowtie3.png" alt = "third step of bowtie"/> 
-                </div>
-                <div class = "d">
-                    <img src = "bowtie4.png" alt = "forth step of bowtie"/> 
-                </div>             
+                <button class="button black display-left" onclick="plusDivs(-1)">&#10094;</button>
+
+                <img class="mySlides" src = "bowtie1.png" alt = "first step of bowtie"/>  
+                <img class="mySlides" src = "bowtie2.png" alt = "second step of bowtie"/>  
+                <img class="mySlides" src = "bowtie3.png" alt = "third step of bowtie"/> 
+                <img class="mySlides" src = "bowtie4.png" alt = "forth step of bowtie"/>
+                
+                <button class="button black display-right" onclick="plusDivs(1)">&#10095;</button>
             </div>
+
+            <script src = "slideshow.js"></script>
 
     </body>
 </html>

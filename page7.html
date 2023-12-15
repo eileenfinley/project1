@@ -47,19 +47,19 @@
                 <h1>Handle Motion</h1>                
             </div>
 
-            <h2>A progression of handle motion</h2>
 
             <div class = "container-plays">
-                <div class = "a">
-                    <img src = "handle1.png" alt = "first step of handle motion"/>
-                </div>
-                <div class = "b">
-                    <img src = "handle2.png" alt = "second step of handle motion"/>
-                </div>
-                <div class = "c">
-                    <img src = "handle3.png" alt = "third step of handle motion"/>
-                </div>
+                <button class="button black display-left" onclick="plusDivs(-1)">&#10094;</button>
+
+                <img class="mySlides" src = "handle1.png" alt = "first step of handle motion"/>
+                <img class="mySlides" src = "handle2.png" alt = "second step of handle motion"/>
+                <img class="mySlides" src = "handle3.png" alt = "third step of handle motion"/>
+
+                <button class="button black display-right" onclick="plusDivs(1)">&#10095;</button>
             </div>
+
+            <script src = "slideshow.js"></script>
+
         </div>
     </body>
 </html>

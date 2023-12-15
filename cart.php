@@ -83,6 +83,8 @@
             foreach ($products as $product) {
                 $subtotal += (float)$product['price'] * (int)$products_in_cart[$product['id']];
             }
+
+            $total = number_format((($subtotal*.05)+$subtotal), 2);
         }
 
         ?>
@@ -133,7 +135,7 @@
                 <span class="text">Subtotal</span>
                 <span class="price">&dollar;<?=$subtotal?></span>
                 <br><span class = "text">Total with Taxes</span>
-                <span class = "price">&dollar;<?=($subtotal*.05)+$subtotal?></span>
+                <span class = "price">&dollar;<?=$total?></span>
             </div>
             <div class="buttons">
                 <input type="submit" value="Update" name="update">

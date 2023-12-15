@@ -33,9 +33,9 @@
         <div>
             <h1 class="name"><?=$product['name']?></h1>
             <span class="price">
-                &dollar;<?=$product['price']?>
+                &dollar;<?=$product['rrp']?>
                 <?php if ($_SESSION['username'] && $product['rrp'] > 0): ?>
-                    <span class="rrp">&dollar;<?=$product['rrp']?></span>
+                    <span class="rrp">&dollar;<?=$product['price']?></span>
                 <?php endif; ?>
             </span>
             <form action="index.php?page=cart" method="post">

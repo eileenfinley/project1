@@ -27,9 +27,9 @@
                 <img src="<?=$product['img']?>" width="200" height="200" alt="<?=$product['name']?>">
                 <span class="name"><?=$product['name']?></span>
                 <span class="price">
-                    &dollar;<?=$product['price']?>
+                    &dollar;<?=$product['rrp']?>
                     <?php if ($_SESSION['username'] && $product['rrp'] > 0): ?>
-                    <span class="rrp">&dollar;<?=$product['rrp']?></span>
+                        <span class="rrp">&dollar;<?=$product['price']?></span>
                     <?php endif; ?>
                 </span>
             </a>

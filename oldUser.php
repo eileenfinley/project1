@@ -22,7 +22,7 @@
                 if($user){
                     if(password_verify($password, $user["pswrd"])){
                         session_start();
-                       $_SESSION["username"] = $user["username"];
+                       $_SESSION["username"] = $username;
                         header("Location: profile.php");
                     }else{
                         echo("<div class = 'alert alert-invalid'>Password invalid</div>");
@@ -33,35 +33,18 @@
             }
         ?>
 
-        
-        <!--<div class = "main">
-            <div class = "signup">
-            <form action = "oldUser.php" method = "post" id = "form">
-                <label>Login</label>
-                <div class = "form-control">
-                    <input type = "text" name = "user" id = "user" placeholder = "Username"/>
-                    <small>Error Message</small>               
-                </div>
-                <div class = "form-control">
-                    <input type = "password" name = "pass" id = "pass" placeholder = "Password"/>
-                    <small>Error Message</small>               
-                </div>
-                <input type = "submit" name = "login">
-            </form>
-            </div>
-        </div>  
-
-        <script type = "text/javascript" src="formvalidate.js"></script>--> 
-        
         <div class = "main">
             <div class = "signup">
-            <form action = "oldUser.php" method = "post" id = "form">
+            <form action = "oldUser.php" method = "post" id = "form" onsubmit = "return validateForm()">
                 <label>Login</label>
-                <input type = "text" name = "user" id = "user" placeholder = "Username"/>            
+                <input type = "text" name = "user" id = "user" placeholder = "Username"/>  
+                <span id="usernameError" class="error"></span><br>          
                 <input type = "password" name = "pass" id = "pass" placeholder = "Password"/>
+                <span id="passwordError" class="error"></span><br>  
                 <input type = "submit" name = "login">
             </form>
             </div>
+            <script src="formvalidate.js"></script>
         </div> 
 
     </body>   

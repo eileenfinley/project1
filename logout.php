@@ -14,11 +14,11 @@
         echo"You've been logged out";
         $sql = "DELETE FROM recentorders";
 
-        if ($conn->query($sql) === TRUE) {
+        /*if ($conn->query($sql) === TRUE) {
             echo "All rows deleted successfully.";
         } else {
             echo "Error deleting rows: " . $conn->error;
-        }
+        }*/
 
 
         header("Location: index.html");

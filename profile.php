@@ -71,12 +71,14 @@
                 <?php 
                     while($rows=$result->fetch_assoc())
                     {
+                        if($rows['user_id'] == $username){
                 ?>
                 <tr>
                     <td><?php echo $rows['product_id'];?></td>
                     <td><?php echo $rows['quantity'];?></td>
                 </tr>
                 <?php
+                        }
                     }
                 ?>
             </table>

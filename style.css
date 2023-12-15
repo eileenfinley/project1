@@ -12,6 +12,7 @@ nav{
   background-color: rgba(238, 234, 234, 0.829);
 
   font-size: 16px;
+  z-index: 10;
 }
 
 /*put the navbar in the correct spot*/

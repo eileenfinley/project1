@@ -37,20 +37,6 @@
         }
     ?>
 
-    <div class = "user"> 
-        <div class = "information">
-            <form action = "userinformation.php" method = "post">
-                <label>Shipping Information</label>
-                <input type = "text" name = "address" placeholder= "Address"/>
-                <input type = "text" name = "city" placeholder = "City"/>
-                <input type = "text" name = "state" placeholder="State"/>
-                <input type = "text" name = "cc" placeholder="Credit Card Number"/>
-                <input type = "submit" name = "submit">
-                <p>Already submitted information? <a href = "index.php">Click here to back out</a></p> 
-            </form>   
-        </div>
- 
-    </div>
 
 </body>
 </html>

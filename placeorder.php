@@ -6,23 +6,26 @@
     <title>Order placing</title>
 </head>
 <body>
-
     <?php
         include('database.php');
         require('cart.php');
         $username = $_SESSION["username"];
         
         foreach($products as $product) {
-            $product_name = $product['name'];
-            $quantity = (int)$products_in_cart[$product['id']];
+            //$product_name = $product['name'];
+            //$quantity = (int)$products_in_cart[$product['id']];
+            $product_name = $_SESSION['product_name'];
+            $quantity = $_SESSION['quantity'];
             $sql = "INSERT INTO recentorders (user_id, product_id, quantity) VALUES ('$username', '$product_name', $quantity)";
             $conn->query($sql);
         }
 
         unset($_SESSION['cart']);
+
+        header("location: userinformation.php");
     ?>
 
-    <div class = "user"> 
+    <!--<div class = "user"> 
         <div class = "information">
             <form action = "userinformation.php" method = "post">
                 <label>Shipping Information</label>
@@ -35,6 +38,6 @@
             </form>   
         </div>
  
-    </div>
+    </div>-->
 </body>
 </html>

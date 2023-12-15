@@ -84,6 +84,9 @@
                 $subtotal += (float)$product['price'] * (int)$products_in_cart[$product['id']];
             }
         }
+
+        $_SESSION["product_name"] = $product['name'];
+        $_SESSION['quantity'] = (int)$products_in_cart[$product['id']];
         ?>
 
     <?=template_header('Cart')?>

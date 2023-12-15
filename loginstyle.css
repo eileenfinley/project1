@@ -149,3 +149,11 @@ a{
 	margin-bottom: 2px;
 	padding-bottom: 0px;
 }
+
+.error{
+	color: red;
+}
+
+.error.highlight{
+	border: 2px solid red;
+}

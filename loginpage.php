@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "loginstyle.css" />
+    <script type = "text/javascript" src="formvalidate.js"></script>            
     <title>Login Page</title>
 </head>
 <body>
@@ -47,7 +48,7 @@
                     echo "successful";
                     $_SESSION["username"] = $user["username"];
                     $id = $_SESSION['id'];
-                    header("Location: index.html");
+                    header("Location: profile.php");
                 }else{
                     die("Something went wrong");
                 }
@@ -55,9 +56,9 @@
         }
     ?>    
 
-    <div class = "main">
+    <!--<div class = "main">
         <div class = "signup">
-            <form action = "loginpage.php" method = "post" id = "form">
+            <form action = "loginpage.php" method = "post" id = "form" >
                 <label>Sign up</label>
                 <div class = "form-control">
                     <input type = "text" name = "user" id = "user" placeholder = "Name" />
@@ -69,11 +70,42 @@
                 </div>
                 <input type = "submit" name = "submit">
                 <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
-            </form>               
+            </form>     
+            <script type = "text/javascript" src="formvalidate.js"></script>            
+        </div>
+    </div>-->
+
+    <!--<div class = "main">
+        <div class = "signup">
+            <form action = "loginpage.php" method = "post" id = "form" onsubmit="return validateForm(event)">
+                <label>Sign up</label>
+                <div class = "form-control">
+                    <input type = "text" name = "user" id = "user" placeholder = "Name" class = "validate" />
+                    <span id="usernameError" class="error"></span><br>             
+                </div>
+                <div class = "form-control">
+                     <input type = "password" name = "pass" id = "pass" placeholder="Password" class = "validate"/>
+                     <span id="passwordError" class="error"></span><br>              
+                </div>
+                <input type = "submit" name = "submit">
+                <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
+            </form>     
+        </div>
+    </div>-->
+
+   <div class = "main">
+        <div class = "signup">
+            <form action = "loginpage.php" method = "post" id = "form">
+                <label>Sign up</label>
+                <input type = "text" name = "user" id = "user" placeholder = "Name" class = "validate" /> 
+                <input type = "password" name = "pass" id = "pass" placeholder="Password" class = "validate"/>    
+                <input type = "submit" name = "submit">
+                <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
+            </form>     
         </div>
     </div>
 
-    <script type = "text/javascript" src="formvalidate.js"></script>  
+    
 
    
 </body>

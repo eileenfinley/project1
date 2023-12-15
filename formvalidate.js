@@ -1,4 +1,4 @@
-const username = document.getElementById('user');
+/*const username = document.getElementById('user');
 const password = document.getElementById('pass');
 
 form.addEventListener('submit', e => {
@@ -35,4 +35,44 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
 	const formControl = input.parentElement;
 	formControl.className = 'form-control success';
+}*/
+
+function validateForm(event) {
+    var isValid = true;
+    
+    // Remove previous error messages and highlights
+    var elements = document.getElementsByClassName("validate");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].classList.remove("highlight");
+    }
+    document.getElementById("usernameError").innerHTML = "";
+    document.getElementById("passwordError").innerHTML = "";
+
+    // Client-side validation
+    var username = document.getElementById("user").value;
+    var password = document.getElementById("pass").value;
+
+    if (username.trim() === "") {
+        document.getElementById("usernameError").innerHTML = "Username is required";
+        document.getElementById("username").classList.add("highlight");
+        isValid = false;
+    }
+
+    if (!isValid) {
+        console.log("Form not submitted due to validation errors");
+        event.preventDefault(); // Prevent the form from submitting
+    }else if (password.trim() === "") {
+        document.getElementById("passwordError").innerHTML = "Password is required";
+        document.getElementById("pass").classList.add("highlight");
+        isValid = false;
+    }
+
+    if (!isValid) {
+        console.log("Form not submitted due to validation errors");
+        event.preventDefault(); // Prevent the form from submitting
+    }else{
+        return isValid;
+    }
+
+   // return isValid;  // Form will be submitted if all validation passes
 }

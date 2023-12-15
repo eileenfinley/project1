@@ -20,7 +20,6 @@
 
             if(empty($username) OR empty($password)){
                 array_push($error,"Fill in all fields");
-                echo("<div class = 'alert alert-invalid'>Fill in all fields</div>");
             }
 
             $sql = "SELECT * FROM phplogin WHERE username = '$username'";
@@ -28,13 +27,12 @@
             $rowNum = mysqli_num_rows($result);
 
             if($rowNum > 0){
-                array_push($error, "username already exists");
-                echo("<div class = 'alert alert-invalid'>Username already exists</div>");
+                array_push($error, "Username already exists");
             }
 
             if(count($error)>0){
                 foreach($error as $error){
-                    echo "". $error ."";
+                    echo("<div class = 'alert alert-invalid'>$error</div>");
                 }   
             }else{
                 require_once "database.php";
@@ -43,12 +41,13 @@
                 $prepareStmt = mysqli_stmt_prepare($stmt,$sql);
 
                 if($prepareStmt){
+                    session_start();
                     mysqli_stmt_bind_param($stmt, "ss", $username, $passwordHash);
                     mysqli_stmt_execute($stmt);
                     echo "successful";
-                    $_SESSION["username"] = $user["username"];
+                    $_SESSION["username"] = $username;
                     $id = $_SESSION['id'];
-                    header("Location: profile.php");
+                    header("location: profile.php");
                 }else{
                     die("Something went wrong");
                 }
@@ -56,69 +55,20 @@
         }
     ?>    
 
-    <!--<div class = "main">
+    <div class = "main">
         <div class = "signup">
-            <form action = "loginpage.php" method = "post" id = "form" >
-                <label>Sign up</label>
-                <div class = "form-control">
-                    <input type = "text" name = "user" id = "user" placeholder = "Name" />
-                    <small>Error Message</small>               
-                </div>
-                <div class = "form-control">
-                     <input type = "password" name = "pass" id = "pass" placeholder="Password" />
-                    <small>Error Message</small>               
-                </div>
-                <input type = "submit" name = "submit">
-                <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
-            </form>     
-            <script type = "text/javascript" src="formvalidate.js"></script>            
-        </div>
-    </div>-->
-
-    <!--<div class = "main">
-        <div class = "signup">
-            <form action = "loginpage.php" method = "post" id = "form" onsubmit="return validateForm(event); return false">
-                <label>Sign up</label>
-                <div class = "form-control">
-                    <input type = "text" name = "user" id = "user" placeholder = "Name" class = "validate" />
-                    <span id="usernameError" class="error"></span><br>             
-                </div>
-                <div class = "form-control">
-                     <input type = "password" name = "pass" id = "pass" placeholder="Password" class = "validate"/>
-                     <span id="passwordError" class="error"></span><br>              
-                </div>
-                <input type = "submit" name = "submit">
-                <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
-            </form>     
-        </div>
-    </div>-->
-
-   <div class = "main">
-        <div class = "signup">
-            <form action = "loginpage.php" method = "post" id = "form">
+            <form action = "loginpage.php" method = "post" id = "form" onsubmit = "return validateForm()">
                 <label>Sign up</label>
                 <input type = "text" name = "user" id = "user" placeholder = "Name" class = "validate" /> 
-                <input type = "password" name = "pass" id = "pass" placeholder="Password" class = "validate"/>    
+                <span id="usernameError" class="error"></span><br>
+                <input type = "password" name = "pass" id = "pass" placeholder="Password" class = "validate"/>  
+                <span id="passwordError" class="error"></span><br>  
                 <input type = "submit" name = "submit">
                 <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
             </form>     
         </div>
-    </div>
-
-    <!--<div class = "main">
-        <div class = "signup">
-            <form action = "loginpage.php" method = "post" id = "form" onsubmit = "validateLoginForm(); return false;">
-                <label>Sign up</label>
-                <input type = "text" name = "user" id = "user" placeholder = "Name" class = "validate" /> 
-                <input type = "password" name = "pass" id = "pass" placeholder="Password" class = "validate"/>    
-                <input type = "submit" name = "submit">
-                <p>Already have a login? <a href = "oldUser.php">Click here</a></p> 
-            </form>     
-        </div>
-
-        <div id="errorMessage" class="error"></div>
         <script src="formvalidate.js"></script>
-    </div>-->
+    </div>
     
 
    

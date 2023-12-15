@@ -9,7 +9,7 @@ nav{
   align-items: center;
   justify-content: center;
   position: fixed;
-  background-color: rgba(238, 234, 234, 0.829);
+  background-color: #097969;
 
   font-size: 16px;
   z-index: 10;
@@ -39,7 +39,7 @@ nav *{
 
 body{
   /*background-color: rgb(218, 244, 204);*/
-  font-family: "Times New Roman", Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
   margin: 5;
   padding: 0;
   background-color: rgb(175, 202, 161);
@@ -57,7 +57,7 @@ a:hover{
 .dropdown-content {
     display: none;
     position: fixed;
-    background-color: rgba(238, 234, 234, 0.829);
+    background-color: #097969;
     min-width: 160px;
     z-index: 1;
 }
@@ -110,14 +110,22 @@ a:hover{
   height: 300px;
 }
 
-table{
-  border: solid 1pt black;
+.truman table{
+  border: solid 2pt #097969;
   border-collapse: collapse;
 }
 
-td{
-  border: solid 1pt black;
+.truman td{
+  border: solid 2pt #097969;
   padding: 10pt;
+}
+
+.truman th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #097969;
+  color: white;
 }
 
 caption{
@@ -185,6 +193,7 @@ caption{
   display: flex;
   margin-top: 30px;
   animation: fadeIn 2s;
+  font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
 }
 
 header .link-icons {
@@ -210,6 +219,7 @@ header .link-icons {
 h2{
   margin-top: 5px;
   animation: fadeIn 3s;
+  font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
 }
 
 .history > h2{
@@ -326,6 +336,7 @@ p{
   border-radius: 10px;
   float: left;
   width: 900px;
+  line-height: 1.5;
 }
 
 .introduction > img{
@@ -345,6 +356,7 @@ p{
 }
 
 .profile tr:nth-child(even){background-color: #f2f2f2;}
+.profile tr:nth-child(odd){background-color: #e2e0e0;}
 
 .profile tr:hover {background-color: #ddd;}
 

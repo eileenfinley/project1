@@ -18,8 +18,6 @@
             $conn->query($sql);
         }
 
-
-        //header("location: userinformation.php");
         unset($_SESSION['cart']);
     ?>
 

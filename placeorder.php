@@ -8,28 +8,22 @@
 <body>
     <?php
         include('database.php');
-        //require('cart.php');
-        session_start();
-
+        require('cart.php');
         $username = $_SESSION["username"];
-        $products = $_SESSION['products'];
-        $product = $_SESSION['product'];
         
         foreach($products as $product) {
-            //$product_name = $product['name'];
-            //$quantity = (int)$products_in_cart[$product['id']];
-            $product_name = $_SESSION['product_name'];
-            $quantity = $_SESSION['quantity'];
+            $product_name = $product['name'];
+            $quantity = (int)$products_in_cart[$product['id']];
             $sql = "INSERT INTO recentorders (user_id, product_id, quantity) VALUES ('$username', '$product_name', $quantity)";
             $conn->query($sql);
         }
 
 
-        header("location: userinformation.php");
+        //header("location: userinformation.php");
         unset($_SESSION['cart']);
     ?>
 
-    <!--<div class = "user"> 
+    <div class = "user"> 
         <div class = "information">
             <form action = "userinformation.php" method = "post">
                 <label>Shipping Information</label>
@@ -42,6 +36,6 @@
             </form>   
         </div>
  
-    </div>-->
+    </div>
 </body>
 </html>

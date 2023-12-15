@@ -37,7 +37,7 @@
         }
     ?>
 
-    <div class = "user"> 
+    <!--<div class = "user"> 
         <div class = "information">
             <form action = "userinformation.php" method = "post">
                 <label>Shipping Information</label>
@@ -50,7 +50,7 @@
             </form>   
         </div>
  
-    </div>
+    </div>-->
 
 </body>
 </html>

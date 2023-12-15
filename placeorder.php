@@ -8,8 +8,12 @@
 <body>
     <?php
         include('database.php');
-        require('cart.php');
+        //require('cart.php');
+        session_start();
+
         $username = $_SESSION["username"];
+        $products = $_SESSION['products'];
+        $product = $_SESSION['product'];
         
         foreach($products as $product) {
             //$product_name = $product['name'];
@@ -20,9 +24,9 @@
             $conn->query($sql);
         }
 
-        unset($_SESSION['cart']);
 
         header("location: userinformation.php");
+        unset($_SESSION['cart']);
     ?>
 
     <!--<div class = "user"> 

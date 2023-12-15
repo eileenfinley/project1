@@ -7,6 +7,8 @@
 </head>
 <body>
     <?php
+        session_start();
+
         // If the user clicked the add to cart button on the product page we can check for the form data
         if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['product_id']) && is_numeric($_POST['quantity'])) {
             // Set the post variables so we easily identify them, also make sure they are integer
@@ -63,6 +65,10 @@
         // Send the user to the place order page if they click the Place Order button, also the cart should not be empty
         if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             header('Location: index.php?page=placeorder');
+            $_SESSION["product_name"] = $product['name'];
+            $_SESSION['quantity'] = (int)$products_in_cart[$product['id']];
+            $_SESSION['products'] = $products;
+            $_SESSION['product'] = $product;
             exit;
         }
         // Check the session variable for products in cart
@@ -85,8 +91,6 @@
             }
         }
 
-        $_SESSION["product_name"] = $product['name'];
-        $_SESSION['quantity'] = (int)$products_in_cart[$product['id']];
         ?>
 
     <?=template_header('Cart')?>

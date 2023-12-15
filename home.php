@@ -28,7 +28,7 @@
                 <span class="name"><?=$product['name']?></span>
                 <span class="price">
                     &dollar;<?=$product['price']?>
-                    <?php if ($product['rrp'] > 0): ?>
+                    <?php if ($_SESSION['username'] && $product['rrp'] > 0): ?>
                     <span class="rrp">&dollar;<?=$product['rrp']?></span>
                     <?php endif; ?>
                 </span>
